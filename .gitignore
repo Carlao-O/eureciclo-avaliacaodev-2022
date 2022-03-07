@@ -13,3 +13,10 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+# Ignoring MacOS generated files:
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
