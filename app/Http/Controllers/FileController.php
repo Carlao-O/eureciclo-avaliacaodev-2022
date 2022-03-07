@@ -44,6 +44,8 @@ class FileController extends Controller
     public function store(Request $request)
     {
         //
+        $fileName = $request->file('file')->getClientOriginalName();
+        $this->service->store($fileName);
     }
 
     /**

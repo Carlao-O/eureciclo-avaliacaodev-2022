@@ -10,4 +10,9 @@ class FileRepository extends BaseRepository
 	{
 		$this->model = $model;
 	}
+
+	public function store(array $fileName): void
+    {
+    	$this->model->create($fileName);
+    }
 }

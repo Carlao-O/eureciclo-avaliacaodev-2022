@@ -10,4 +10,9 @@ class FileService
     {
         $this->repository = $repository;
     }
+
+    public function store(string $fileName): void
+    {    
+        $this->repository->store(['title' => $fileName]);
+    }
 }
