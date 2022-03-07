@@ -5,8 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\File;
 use Illuminate\Http\Request;
 
+use App\Services\FileService;
+
 class FileController extends Controller
 {
+    public function __construct(FileService $service)
+    {
+        $this->service = $service;
+    }
+
     /**
      * Display a listing of the resource.
      *
