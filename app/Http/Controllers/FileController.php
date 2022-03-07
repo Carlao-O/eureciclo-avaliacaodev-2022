@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\File;
 use Illuminate\Http\Request;
 
+use App\Http\Requests\FileRequest;
+
 use App\Services\FileService;
 
 class FileController extends Controller
@@ -41,7 +43,7 @@ class FileController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(FileRequest $request)
     {
         //
         $fileName = $request->file('file')->getClientOriginalName();

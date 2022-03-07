@@ -34,8 +34,21 @@
 
                             <h4 class="card-title pb-4">Importar Arquivo</h4>
 
+                            @if ($errors->any())
+                                <div class="alert alert-danger">
+                                    <h4 class="text-danger center">Ops! Existem problemas com a sua solicitação!</h4>
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
                             <div class="form-group">
                                 <h6>Selecione um arquivo para realizar o upload:</h6>
+                                <small>Atenção! Somente arquivos do tipo .txt são aceitos.</small>
+                                
                                 <div class="col-12 pb-2 pt-2">
                                     <div class="input-group">
                                         <div class="custom-file">

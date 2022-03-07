@@ -13,7 +13,7 @@ class FileRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,6 +25,15 @@ class FileRequest extends FormRequest
     {
         return [
             //
+            'file' => 'required|mimes:txt'
+        ];
+    }
+    
+    public function messages()
+    {
+        return [
+            'file.required' => 'Você precisa informar um arquivo para importação.',
+            'file.mimes' => 'Formato de arquivo inválido. O arquivo deve ser do tipo TXT.'
         ];
     }
 }
