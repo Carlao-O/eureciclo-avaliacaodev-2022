@@ -1,0 +1,94 @@
+*{
+	outline: none !important;
+}
+
+html{
+	scroll-behavior: smooth;
+}
+
+.app_height-250px{
+	height: 250px !important;
+}
+
+.app_width-150px{
+	width: 150px !important;
+}
+.app_width-180px{
+	width: 180px !important;
+}
+.app_width-200px{
+	width: 200px !important;
+}
+.app_width-250px{
+	width: 250px !important;
+}
+.app_width-300px{
+	width: 300px !important;
+}
+.app_width-100pc{
+	width: 100% !important;
+}
+
+.app_margintop-20px{
+	margin-top: 20px !important;
+}
+
+.app_marginleft-85pxn{
+	margin-left: -85px !important;
+}
+.app_marginleft-35pxn{
+	margin-left: -65px !important;
+}
+.app_marginleft-5px{
+	margin-left: 5px !important;
+}
+.app_marginleft-10px{
+	margin-left: 10px !important;
+}
+.app_marginright-10px{
+	margin-right: 10px !important;
+}
+
+.app_fontsize-35px{
+	font-size: 35px !important;
+}
+.app_fontsize-65px{
+	font-size: 65px !important;
+}
+
+.app_textalign-center{
+	text-align: center !important;
+}
+
+.app_textdecoration-none{
+	text-decoration: none !important;
+}
+
+.app_display-none{
+	display: none !important;
+}
+.app_display-block{
+	display: block !important;
+}
+
+.app_visibility-hidden{
+	visibility: hidden !important;
+}
+.app_visibility-visible{
+	visibility: visible !important;
+}
+
+.app_position-relative{
+	position: relative !important;
+}
+
+.app_zindex-1{
+	z-index: 1 !important;
+}
+.app_zindex-9999{
+	z-index: 9999 !important;
+}
+
+.app_background-fafafa{
+    background: #fafafa !important;
+}
