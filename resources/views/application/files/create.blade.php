@@ -3,7 +3,7 @@
 @section('body')
     <div class="page-breadcrumb">
         <div class="row align-items-center">
-            <div class="col-12">
+            <div class="col-6">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 d-flex align-items-center">
                         <li class="breadcrumb-item">
@@ -20,6 +20,11 @@
                     </ol>
                 </nav>
                 <h1 class="mb-0 fw-bold">Formulário de Upload de Arquivos</h1> 
+            </div>
+            <div class="col-6">
+                <div class="text-end upgrade-btn">
+                    <a href="/files" class="btn btn-danger text-white">Voltar</a>
+                </div>
             </div>
         </div>
     </div>

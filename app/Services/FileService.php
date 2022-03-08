@@ -15,4 +15,11 @@ class FileService
     {    
         $this->repository->store(['title' => $fileName]);
     }
+
+    public function index(): array
+    {
+    	$files = $this->repository->all();
+        $files = $files->sortByDesc('created_at')->toArray();
+    	return compact(['files']);
+    }
 }

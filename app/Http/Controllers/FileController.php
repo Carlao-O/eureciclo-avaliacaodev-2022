@@ -24,6 +24,8 @@ class FileController extends Controller
     public function index()
     {
         //
+        $data = $this->service->index();
+        return view('application.files.index', compact(['data']));
     }
 
     /**
