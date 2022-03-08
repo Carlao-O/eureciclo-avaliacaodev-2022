@@ -11,8 +11,12 @@ class FileRepository extends BaseRepository
 		$this->model = $model;
 	}
 
-	public function store(array $fileName): void
+	public function store(array $fileName, array $sales): void
     {
-    	$this->model->create($fileName);
+    	$id = $this->model->create($fileName)->id;
+
+		$file = File::find($id);
+
+		$file->sales()->createMany($sales);
     }
 }

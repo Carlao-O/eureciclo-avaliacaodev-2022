@@ -9,8 +9,12 @@ use App\Http\Requests\FileRequest;
 
 use App\Services\FileService;
 
+use App\Traits\FileTrait;
+
 class FileController extends Controller
 {
+    use FileTrait;
+
     public function __construct(FileService $service)
     {
         $this->service = $service;
@@ -47,9 +51,15 @@ class FileController extends Controller
      */
     public function store(FileRequest $request)
     {
+        
         //
         $fileName = $request->file('file')->getClientOriginalName();
-        $this->service->store($fileName);
+
+        $filepath = $request->file('file')->getPathName();
+        $sales = $this->validateFileContent($filepath);
+
+        $this->service->store($fileName, $sales);
+        return redirect()->route('files.index');
     }
 
     /**

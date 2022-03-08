@@ -9,4 +9,9 @@ class File extends Model
 {
     use HasFactory;
     protected $fillable = ['title'];
+
+    public function sales()
+    {
+        return $this->hasMany(Sale::class);
+    }
 }
