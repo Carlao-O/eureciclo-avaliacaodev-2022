@@ -18,7 +18,7 @@
             </div>
             <div class="col-6">
                 <div class="text-end upgrade-btn">
-                    <a href="/files/create" class="btn btn-primary text-white">Novo Arquivo</a>
+                    <a href="{{ route('files.create') }}" class="btn btn-primary text-white">Novo Arquivo</a>
                 </div>
             </div>
         </div>
@@ -41,6 +41,7 @@
                                     <th scope="col">ID</th>
                                     <th scope="col">TÍTULO DO ARQUIVO</th>
                                     <th scope="col">DATA DE CARREGAMENTO</th>
+                                    <th scope="col">AÇÕES</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -49,6 +50,11 @@
                                         <td scope="row">{{ $file['id'] }}</td>
                                         <td>{{ $file['title'] }}</td>
                                         <td>{{ date('d/m/Y', strtotime($file['created_at'])) }}</td>
+                                        <td>
+                                            <a href="{{ route('files.show', $file['id']) }}" class="justify-content-center btn btn-outline-primary align-items-center">
+                                                <i class="mdi mdi-eye-outline app_marginright-10px"></i> Listar Vendas Registradas
+                                            </a>
+                                        </td>
                                     </tr>
                                 @endforeach
                             </tbody>

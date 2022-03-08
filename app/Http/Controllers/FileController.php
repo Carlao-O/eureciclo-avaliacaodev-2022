@@ -51,7 +51,6 @@ class FileController extends Controller
      */
     public function store(FileRequest $request)
     {
-        
         //
         $fileName = $request->file('file')->getClientOriginalName();
 
@@ -71,6 +70,10 @@ class FileController extends Controller
     public function show(File $file)
     {
         //
+        $id = $file->id;
+        $data = $this->service->show($id);
+        
+        return view('application.files.show', compact(['data']));
     }
 
     /**

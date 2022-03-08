@@ -12,6 +12,6 @@ class Sale extends Model
 
     public function recipes()
     {
-        return $this->belongsToMany(File::class);
+        return $this->belongsTo(File::class);
     }
 }

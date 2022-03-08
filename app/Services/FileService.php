@@ -22,4 +22,14 @@ class FileService
     {    
         $this->repository->store(['title' => $fileName], $sales);
     }
+
+    public function show(int $id): array
+    {    
+        $file = $this->repository->find($id);
+        $sales = $file->sales;
+        
+        $totalRevenue = $this->repository->calculateTotalRevenue($id);
+
+        return compact(['file', 'sales', 'totalRevenue']);
+    }
 }
